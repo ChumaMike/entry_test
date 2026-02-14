@@ -155,6 +155,7 @@ SecureLottery could benefit from off-chain entry tracking or sharding mechanisms
 3. Hardhat Documentation: https://hardhat.org/getting-started/
 4. Ethereum Stack Exchange: https://ethereum.stackexchange.com/
 5. CryptoZombies Tutorial: https://cryptozombies.io/
+6. AI inline completion
 
 ---
 
