@@ -1,6 +1,7 @@
 # Part B: Design Document
 
 **Section 1: SkillsMarketplace (Agricultural Marketplace)**
+
 **Section 2: SecureLottery (DeFi & NFT Integration)**
 
 ---
