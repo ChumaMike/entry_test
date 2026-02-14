@@ -29,11 +29,11 @@
 - **C)** Use ERC-721 exclusively, store all data off-chain for gas savings, and require buyers to use MetaMask with manual price negotiations.  
 - **D)** Build everything as separate NFT collections with no DEX integration since farmers won't understand DeFi protocols.  
 
-**Your Answer:** [A/B/C/D]  
+**Your Answer:** [B]  
 
 **Your Reasoning:**  
 [2–3 sentences explaining why you chose this answer. What makes it the best choice?]  
-
+Using ERC-1155 and implementing a reputation on-chain mappings helps make information more public for anyone. Anyone can see their information whenever they would like to. Integrating with Uniswap helps make transaction a lot faster and easier to do and they are kept track of for everyone to see, not just a certain company. 
 ---
 
 ### Question 2: Cost Optimisation (Practical Aptitude)
@@ -53,18 +53,21 @@ A farmer wants to list 50 bags of maize. Gas costs are:
 - **C)** They cost exactly the same  
 - **D)** ERC-1155 is cheaper by approximately $54  
 
-**Your Answer:** [A/B/C/D]  
+**Your Answer:** [B]  
 
 **Your Calculation/Reasoning:**  
-- ERC-721 cost = [Show calculation]
-- ERC-1155 cost = [Show calculation]
-- Difference = [Show calculation]
 
+- ERC-721 cost = 50 items × 100,000 gas = 5,000,000 gas  
+  Cost in ETH = 5,000,000 × 20 gwei = 100,000,000,000,000,000 wei = 0.1 ETH  
+  Cost in USD = 0.1 ETH × $3,000/ETH = $300  
 
-[Explain why gas optimisation matters for African users]  
+- ERC-1155 cost = 150,000 gas (first mint) + 49 items × 5,000 gas = 150,000 + 245,000 = 395,000 gas  
+  Cost in ETH = 395,000 × 20 gwei = 7,900,000,000,000,000 wei = 0.0079 ETH  
+  Cost in USD = 0.0079 ETH × $3,000/ETH ≈ $23.70  
+
+It will help limit the price since it is still blowing up in Africa.
 
 ---
-
 ### Question 3: Value Proposition Explanation (Communication & Thinking)
 
 A farmer asks: *"Why can't we just use a normal website with a database?"*
@@ -76,11 +79,11 @@ A farmer asks: *"Why can't we just use a normal website with a database?"*
 - **C)** "Because smart contracts are more secure than databases and Web3 is decentralised."  
 - **D)** "Blockchain uses cryptography which makes it unhackable, unlike normal databases."  
 
-**Your Answer:** [A/B/C/D]  
+**Your Answer:** [B]  
 
 **Your Explanation:**  
 [2–3 sentences explaining what makes this answer correct. What did you learn about why blockchain matters in Africa?]  
-
+In a normal database, theres an entity responsible for managing that data and is at risk of being manipulated or hacked or just lost. In Blockchain network data is spread accross so its always there and anyone can always see it and cannot be modified.
 ---
 
 ## PART 2: DeFi & NFT Integration (Advanced Concepts)
@@ -103,18 +106,15 @@ A farmer asks: *"Why can't we just use a normal website with a database?"*
 - **C)** The liquidity provider experiences impermanent loss because the pool maintains a constant product rather than constant ratio. ERC-721 would be more suitable than ERC-1155 for the NFT marketplace since individual NFTs require unique transactions.  
 - **D)** The constant product formula prevents any impermanent loss by automatically rebalancing. DAOs cannot implement financial protections due to smart contract immutability. ERC-1155 tokens are incompatible with standard DEX protocols.  
 
-**Your Answer:** [A/B/C/D]  
+**Your Answer:** [B]  
 
 **Your Reasoning:**  
 
-- **AMM Mathematics:** How do you calculate the swap output? What happens to the liquidity provider's value?  
-- **DeFi Governance:** What is impermanent loss and how does protection work?  
-- **Token Standards:** Why might ERC-1155 be preferred over ERC-721 for marketplace integration?  
-
-[2–3 sentences synthesising these concepts into a coherent explanation]  
+- **AMM Mathematics:** Using the constant product formula (x × y = k), initial state is 10 ETH × 20,000 USDC = 200,000 k. After adding 2 ETH we have 12 ETH so y = 200,000 / 12 = 16,666.67 USDC. The trader receives ~3,333 USDC. The liquidity provider experiences impermanent loss as the pool ratio diverges from external market prices.  
+- **DeFi Governance:** Impermanent loss occurs when token prices in the pool change relative to when the liquidity was added. Protection would compensate LPs for this loss. DAOs can implement this through smart contract upgrades or insurance pools.  
+- **Token Standards:** ERC-1155 is preferred because it supports both fungible and non-fungible tokens. 
 
 ---
-
 ## SUBMISSION CHECKLIST
 
 - You answered all questions for **BOTH PART 1 AND PART 2**  
@@ -125,4 +125,4 @@ A farmer asks: *"Why can't we just use a normal website with a database?"*
 
 ---
 
-**Challenges faced:** [What was difficult? Which concepts are you less confident about?]  
+**Challenges faced:** [I found the gas cost calculation for Question 2 confusing at first but it clicked once I understood the conversion rate of Ether and gas and gwei. The multi-concept synthesis question required recalling multiple DeFi concepts and combining them coherently, which took some time to structure properly.]  
